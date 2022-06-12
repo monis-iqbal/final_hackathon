@@ -3,7 +3,6 @@ import Signup from "./forms/Signup";
 import Courses from "./Courses";
 import Home from "./Home"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 
 function Myroutes() {

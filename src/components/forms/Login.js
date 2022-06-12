@@ -9,35 +9,37 @@ import { auth } from '../authentication/Firebase';
 const Login = () => {
     const emailRef = useRef(null)
     const passwordRef = useRef(null)
-    const signUp = e => { 
+    const signUp = e => {
         e.preventDefault();
         auth.createUserWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
 
-        ).then(user => { 
+        ).then(user => {
             console.log(user)
-        }).catch(err => { 
+        }).catch(err => {
             console.log(err)
         })
-    } 
+    }
 
     return (
         <>
             <Navbar />
 
             <div className='login_main_div'>
-                <form>
+                <form method='POST' action={"/"}>
                     <img src={Lock} alt="auth icon" className='lock_form' />
                     <h2 className='form_heading'>LOGIN</h2>
                     <label>Email:</label>
                     <br />
-                    <input type="email" className='input_width' ref={emailRef}/>
+                    <input type="email" placeholder='Email...' className='input_width' 
+                     />
                     <br />
                     <br />
                     <label>Password:</label>
                     <br />
-                    <input type="password" className='input_width' ref={passwordRef} />
+                    <input type="password" placeholder="Password..." className='input_width' 
+                     />
                     <br />
                     <button className='form_button'>LOGIN</button>
                     <br />

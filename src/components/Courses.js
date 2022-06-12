@@ -11,6 +11,7 @@ const Courses = () => {
 
         <>
             <Navbar />
+            <h1 className="heading_course" ><b>Courses</b></h1>
             <div className="courses_div">
                 <div className="column_all">
                     <img src={Web_deve} alt="web development logo" className="courses_img">
